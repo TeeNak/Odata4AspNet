@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Data.Entity.Migrations;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -27,7 +28,8 @@ namespace Odata4AspNet.Models
             */
 
             Assembly assembly = Assembly.GetExecutingAssembly();
-            string resourceName = "Odata4AspNet.Models.SeedData.products.csv";
+
+            string resourceName = "Odata4AspNet.Models.SeedData.Products.csv";
             using (Stream stream = assembly.GetManifestResourceStream(resourceName))
             {
                 using (StreamReader reader = new StreamReader(stream, Encoding.UTF8))
