@@ -11,6 +11,7 @@ namespace Odata4AspNet.Models
         public ProductsContext()
                 : base("name=ProductsContext")
         {
+            Database.SetInitializer<ProductsContext>(new ProductsContextInitializer());
         }
         public DbSet<Product> Products { get; set; }
     }
